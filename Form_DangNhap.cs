@@ -1,7 +1,12 @@
+using System;
+using System.Data;
+using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 namespace HeThongThiTracNghiem
 {
     public partial class Form_DangNhap : Form
     {
+        private const string connectionString = "Data Source=localhost;Initial Catalog=Hethongthitracnghiem;Integrated Security=True;TrustServerCertificate=True";
         public Form_DangNhap()
         {
             InitializeComponent();
@@ -15,7 +20,7 @@ namespace HeThongThiTracNghiem
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string tk = guna2TextBox1.Text.Trim();
-            string mk = guna2TextBox2.Text.Trim(); 
+            string mk = guna2TextBox2.Text.Trim();
 
             if (tk == "" || mk == "")
             {
@@ -82,6 +87,11 @@ namespace HeThongThiTracNghiem
         }
 
         private void Form_DangNhap_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
         {
 
         }
